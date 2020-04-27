@@ -1,4 +1,6 @@
 coolmonk
 ========
 
-pet project
+coolmonk.org
+
+news aggregator, some peronal music and tweets
