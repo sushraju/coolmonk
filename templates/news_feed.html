@@ -24,15 +24,16 @@
                 <div class="item">
                     <div class="meta">
                         <div class="upper-row">
-                            <h3 class="job-title"><b> {{ article['title'] }} </b></h3>
+                            <h3 class="job-title"><a href="{{ article['url'] }}"><b>{{ article['title'] }}</b></a></h3>
                         </div><!--//upper-row-->
-                        <div class="company"><a href="{{ article['url'] }}">{{ article['url'] }}</a></div>
                     </div><!--//meta-->
                     {% if article['description'] %}
-                        <div class="details">
                         {% if article['urlToImage'] %}
-                            <img src="{{ article['urlToImage'] }}">
+                            <div>
+                               <img style="max-width: 650px; max-height: 500px; padding: 20px " src="{{ article['urlToImage'] }}">
+                            </div>
                         {% endif %}
+                        <div class="details">
                         {% autoescape false %}
                         {{ article['description'] }}  
                         {% endautoescape %}
