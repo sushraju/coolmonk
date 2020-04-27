@@ -1,0 +1,62 @@
+{% extends "bootstrap/base.html" %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="shortcut icon" href="https://coolmonk.org/static/images/favicon.ico?v2">
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+<link rel="stylesheet" href="{{url_for('static', filename='plugins/font-awesome/css/font-awesome.css')}}">
+{% endblock %}
+
+{% block title %}
+    News 
+{% endblock %}
+
+{% block body %}
+    <div class="wrapper">
+        <div class="main-wrapper">
+            <section class="section experiences-section">
+                <h2 class="section-title"><i class="fa fa-briefcase"></i>News</h2>
+                {% for article in all_articles['articles'] %}
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="job-title"><b> {{ article['title'] }} </b></h3>
+                        </div><!--//upper-row-->
+                        <div class="company"><a href="{{ article['url'] }}">{{ article['url'] }}</a></div>
+                    </div><!--//meta-->
+                    {% if article['description'] %}
+                        <div class="details">
+                        {% if article['urlToImage'] %}
+                            <img src="{{ article['urlToImage'] }}">
+                        {% endif %}
+                        {% autoescape false %}
+                        {{ article['description'] }}  
+                        {% endautoescape %}
+                        </div><!--//details-->
+                    {% endif %}
+                </div><!--//item-->
+                {% endfor %}
+                
+                
+            </section><!--//section-->
+        </div><!--//main-body-->
+    </div>
+<footer class="footer">
+        <div class="text-center">
+                <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can check out other license options via our website: themes.3rdwavemedia.com */-->
+                <small class="copyright">News source <i class="fa fa-heart"></i> by <a href="https://newsapi.org/" target="_blank">News API</a></small>
+        </div><!--//container-->
+    </footer>
+
+{% block scripts %}
+<script src="{{bootstrap_find_resource('jquery.js', cdn='jquery')}}"></script>
+<script src="{{bootstrap_find_resource('js/bootstrap.js', cdn='bootstrap')}}"></script>
+<script src="{{url_for('static', filename='js/main.js')}}"></script>
+{%- endblock scripts %}
+    
+{% endblock body %}
+

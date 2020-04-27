@@ -1,0 +1,40 @@
+{% extends "bootstrap/base.html" %}
+
+{% block head %}
+    {{ super() }}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="static/main.css">
+    <link rel="shortcut icon" href="https://coolmonk.org/static/images/favicon.ico?v2">
+    <title>CoolMonk</title>
+    <meta name="description" content="Personal website about general stuff">
+{% endblock %}
+        
+{% block body %}
+     <div class="wrapper">
+        <div class="main-wrapper">
+        <!--
+            MADE WITH <3 AND JAVASCRIPT
+        -->
+        
+        <div class="upper-row">
+        <h4>
+            Random stuff in general. Work related stuff is <a href="/work">here</a>
+        </h4>
+
+        <h4>
+            Some news from the world is consolidated <a href="/news">here</a>
+        </h4>
+        
+        <h4>
+            Some of the music I publish to soundcloud
+        </h4>
+        </div>
+        <iframe width="90%" height="400" scrolling="no" frameborder="yes" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/81967871&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+        
+        <p>
+        <a class="twitter-timeline" href="https://twitter.com/sushraju?ref_src=twsrc%5Etfw">Tweets by sushraju</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </p>
+        </div>
+      </div>
+
+{% endblock body %}
