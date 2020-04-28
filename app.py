@@ -88,7 +88,7 @@ def news():
    to_utc_time = pytz.UTC.localize(curr_utc_time)
    to_pst_time = to_utc_time.astimezone(pst)
 
-   sources='cnn,wired,the-globe-and-mail,techcrunch,the-verge,reuters,hacker-news,cnn,bbc-news,ars-technica'
+   sources='wired,the-globe-and-mail,techcrunch,the-verge,reuters,hacker-news,cnn,bbc-news,ars-technica'
    all_articles = news_api.get_everything(sources=sources,
                                       from_param=str(to_pst_time.date()),
                                       to=str(to_pst_time.date()),
