@@ -3,4 +3,4 @@ coolmonk
 
 coolmonk.org
 
-news aggregator, some peronal music and tweets
+news aggregator, some personal music and tweets
