@@ -35,6 +35,11 @@ The 'Description of role' field does not get escaped by the templating engine,
 so you can put raw HTML in it if you like.
 """
 experience = [
+        ['Site Reliability Engineering',
+            'Jun 2020 – present',
+            'Optimizely, San Francisco',
+            '<p><li>performance, reliability, cdn, dns, data infrastructure and automation.</p>'
+        ],
         ['Senior Manager, Platform & Infrastructure',
             'Jun 2019 – Feb 2020',
             'Reltio, Redwood Shores',
